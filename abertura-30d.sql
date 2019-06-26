@@ -16,7 +16,7 @@ FROM
     INNER JOIN _Subscribers s
     ON o.SubscriberKey = s.SubscriberKey
     WHERE o.IsUnique = 1
-    AND j.DeliveredTime >= DATEADD(DAY, -15, GETDATE())
+    AND j.DeliveredTime >= DATEADD(DAY, -30, GETDATE())
     AND j.EmailSubject IS NOT NULL
     AND j.EmailName IS NOT NULL
     AND s.EmailAddress LIKE '%_@__%.__%'

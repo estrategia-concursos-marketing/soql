@@ -17,7 +17,7 @@ FROM
     ON c.SubscriberKey = s.SubscriberKey
     WHERE c.IsUnique = 1
     AND j.DeliveredTime >= DATEADD(DAY, -30, GETDATE())
-    AND (c.URL like '%sucesso%' or j.EmailName LIKE '%convite%') 
+    AND (c.URL like '%sucess%' or j.EmailName LIKE '%convit%') 
     AND s.EmailAddress LIKE '%_@__%.__%'
 ) x
 WHERE x.rank = 1
