@@ -19,5 +19,6 @@ FROM
     AND j.DeliveredTime >= DATEADD(DAY, -30, GETDATE())
     AND (c.URL like '%sucess%' or j.EmailName LIKE '%convit%') 
     AND s.EmailAddress LIKE '%_@__%.__%'
+    AND s.SubscriberKey LIKE '%_@__%.__%'
 ) x
 WHERE x.rank = 1
